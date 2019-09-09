@@ -36,6 +36,7 @@ Requirements
 ------------
 
 * `nmap`
+* `key (see slig.nse)`
 
 Disclaimer
 ----------
