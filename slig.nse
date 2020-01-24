@@ -52,7 +52,7 @@ action = function(host, port)
     if nmap.debugging() > 0 then nsedebug.print_hex(response) end
     if (string.byte(response:sub(1,1)) ~= 0x4b) and response:len() ~= 144 then return nil end
     -- Decrypt response
-    response_decrypted = openssl.decrypt("DES-EDE3-ECB", string.rep(key, 3), nil, response:sub(17,-1))
+    response_decrypted = openssl.decrypt("DES-EDE3", string.rep(key, 3), nil, response:sub(17,-1))
     if nmap.debugging() > 0 then nsedebug.print_hex(response_decrypted)	end
 
     -- Add banner to result
@@ -81,7 +81,7 @@ action = function(host, port)
     if nmap.debugging() > 0 then nsedebug.print_hex(response) end
     if (string.byte(response:sub(1,1)) ~= 0x4b) and response:len() ~= 64 then return nil end
     -- Decrypt response
-    response_decrypted = openssl.decrypt("DES-EDE3-ECB", string.rep(key, 3), nil, response:sub(17,-1))
+    response_decrypted = openssl.decrypt("DES-EDE3", string.rep(key, 3), nil, response:sub(17,-1))
     if nmap.debugging() > 0 then nsedebug.print_hex(response_decrypted) end
 
     -- Parse program header and add to result
