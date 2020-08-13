@@ -1,4 +1,3 @@
-local bin = require "bin"
 local nmap = require "nmap"
 local nsedebug = require "nsedebug"
 local openssl = require "openssl"
