@@ -42,7 +42,7 @@ action = function(host, port)
     -- LOGO! Soft Comfort V8 Demo (https://www.automation.siemens.com/salesmaterial-as/software/logo/webdemo/Windows/VM/win64/setup.exe) SHA256: 2C9D1A1D808257F5361577235B9400F302936F87A959FF67665BA4B7B473841F 
     -- classes.jar -> DE.siemens.ad.logo.util -> LogoMath.keyForBinFile
     -- The proof is left as an exercise for the reader
-    local key = "\x00\x00\x00\x00\x00\x00\x00\x00"
+    local key = "19, 41, 38, -116, 10, -34, 114, 65"
 
     -- GetProfile query
     local pkt_GetProfile = stdnse.fromhex("4bc001e0" .. "00000000" .. "00000000" .. "47657450726F66696C650000" .. "10270000")
